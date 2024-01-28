@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+  }
+  
+  body {
+    background: linear-gradient(45deg, #9c5ca8, #332d74, #000000);
+  }
+  
+  .cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .logo {
+    height: 180px;
+    border: none;
+    border-radius: 120px;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 32px;
+  }
+  
+  .botoes {
+    font-family: sans-serif;
+    color: #f2f2f2;
+    font-weight: 400;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 30px;
+  }
+  
+  .pesquisar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pesquisar input[type="text"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .pesquisar .botao-pesquisar {
+    background-color: #906ace;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+.destaque {
+    width: 101%;
+    margin-left: 80px;
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin-top: 20px;
+}
+  
+  .nomeDestaque {
+    padding: 5px;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    align-items: center;
+    background-color: transparent;
+  }
+  
+  .tituloDestaque {
+    width: 90%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: #f5f3f2;
+    border-top: 0.4px solid white;
+    margin-top: 20px;
+  }
+  
+  .subtituloProdutoDestaque {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: rgb(100, 94, 94);
+    border-bottom: 0.4px solid #0c0b0a;
+  }
+  
+  .produtoDestaque {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    gap: 10px;
+    border-radius: 20px;
+  }
+  
+  .nomeProdutoDestaque {
+    font-size: 50px;
+    font-weight: bold;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .descricaoDestaque {
+    width: 15%;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  .descricaoProdutoDestaque {
+    padding: 10px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    border: solid grey;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    font-size: 28px;
+  }
+  
+  .descricaoProdutoDestaque:hover {
+    border: solid rgb(190, 99, 183);
+  }
+  
+  .descricaoProdutoDestaque::before {
+    content: "• ";
+    font-weight: bold;
+    color: rgb(8, 8, 8);
+  }
+  
+  .descricaoImagemDestaque {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .imgProdutoDestaque {
+    position: relative;
+    margin-top: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .imgDestaque {
+    width: 100%;
+    background: none;
+    border-radius: 30px;
+    background-color: transparent;
+  }
+  
+  .imgDestaque:hover {
+    border: solid rgb(68, 67, 67);
+    background-color: rgb(158, 157, 157);
+    font-weight: bold;
+  }
+  
+  .botaoDestaque {
+    position: absolute;
+    bottom: 10px;
+    left: 40%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: grey;
+    width: 185px;
+    height: 67px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: black;
+  }
+  
+  .imgProdutoDestaque:hover .botaoDestaque {
+    opacity: 1;
+  }
+  
+  .botaoDestaque:hover {
+    background-color: rgb(190, 179, 179);
+  }
+  
+  .precosProdutoDestaque {
+    margin-top: 30px;
+    width: 30%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: sans-serif;
+  }
+  
+  .precoNormalDestaque {
+    text-decoration: line-through;
+    font-family: sans-serif;
+    font-size: 30px;
+    color: grey;
+  }
+  
+  .promocaoDestaque {
+    text-decoration: solid;
+    font-family: sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: red;
+  }
+  
+  .informacaoDestaque {
+    text-decoration: solid;
+    font-family: sans-serif;
+    font-size: 30px;
+    color: blue;
+    margin-top: 10px;
+  }
+  
+  .descricaoPrecoDestaque {
+    text-decoration: italic;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: grey;
+  }
+  
+  .formas {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    border: solid rgb(190, 188, 188);
+    border-radius: 5px;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    font-size: 24px;
+    text-align: center;
+    font-family: sans-serif;
+  }
+  
+  .formas:hover {
+    border: solid rgb(68, 67, 67);
+    background-color: rgb(158, 157, 157);
+    font-weight: bold;
+  }
+  
+  .botaoPrecos {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(102, 102, 228);
+    width: 95%;
+    height: 67px;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: black;
+  }
+  
+  .botaoPrecos:hover {
+    border: solid rgb(6, 6, 10);
+    background-color: rgb(72, 72, 161);
+    font-weight: bold;
+  }
+  
+  .formas,  select {
+    cursor: pointer;
+  }
+  
+  .botaoPrecos,
+  select {
+    cursor: pointer;
+  }
+  
+  .imgDestaque,
+  select {
+    cursor: pointer;
+  }
+  
+  .botaoDestaque,
+  select {
+    cursor: pointer;
+    border: black;
+  }
+  
+.produtos {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: purple;
+    gap: 10px;
+    border-radius: 10px;
+    margin-left: 90px;
+    margin-top: 20px;
+}
+  
+  .lista {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .produto {
+    flex-basis: 45%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 20px;
+  }
+  
+  .titulo {
+    width: 90%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-left: 10px;
+  }
+  
+  .produto:hover {
+    border: solid #CCBBFF;
+    font-weight: bold;
+  }
+  
+  .produto,
+  select {
+    cursor: pointer;
+  }
+  
+  .imgproduto {
+    flex-basis: 50%;
+    max-width: 100px;
+  }
+  
+  .imgproduto img {
+    width: 100%;
+    background: none;
+    border-radius: 30px;
+    background-color: transparent;
+  }
+  
+  .conteudoproduto {
+    flex-basis: 50%;
+    text-align: left;
+  }
+  
+  .nomeProduto {
+    font-size: 20px;
+  }
+  
+  .precoNormal {
+    text-decoration: line-through;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: grey;
+  }
+  
+  .promocao {
+    text-decoration: solid;
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #404040;
+  }
+  
+  .informacao {
+    text-decoration: solid;
+    font-family: sans-serif;
+    font-size: 15px;
+    color: red;
+  }
+  
+  .descricao {
+    text-decoration: italic;
+    font-family: sans-serif;
+    font-size: 10px;
+    color: grey;
+  }
+  
+  .vermais {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 20px;
+  }
+  
+  .botao {
+    background-color: #ecd6c4;
+    width: 260px;
+    height: 67px;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #2F2325;
+  }
+  
+  .botao:hover {
+    background-color: #f8d1b1;
+    font-weight: bold;
+    color: #000000;
+    width: 280px;
+  }
+  
+  .botao,
+  select {
+    cursor: pointer;
+  }
+  
+  .grupo {
+    border: none;
+  }
+  
+  .formulario {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    margin-left: 90px;
+    background-color: #f5f5f5;
+    color: #59429d;
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .inicio {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #titulo {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  #subtitulo {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .grupo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .campo textarea {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #ff5500;
+    box-shadow: 0 0 5px rgba(255, 85, 0, 0.5);
+  }
+  
+  input[type="submit"] {
+    background-color: #ff5500;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #ff4400;
+  }
+  
+  .transparente {
+    color: #888888;
+  }
+  
+  .transparente input[type="text"],
+  .transparente input[type="email"],
+  .transparente textarea {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
